@@ -1,1 +1,1 @@
-# STM32_Dual DC BO Motor Control_Using PWM+GPIO+UART
+# STM32 Dual DC BO Motor Control Using PWM, GPIO & UART (Nucleo-F446RE)

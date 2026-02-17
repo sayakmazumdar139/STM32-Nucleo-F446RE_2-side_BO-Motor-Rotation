@@ -1,1 +1,1 @@
-# STM32-Nucleo-F446RE_2-side_BO-Motor-Rotation
+# STM32_Dual DC BO Motor Control_Using PWM+GPIO+UART

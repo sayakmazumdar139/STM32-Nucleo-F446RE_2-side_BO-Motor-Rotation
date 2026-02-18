@@ -19,6 +19,7 @@ Practical hardware validation using L298N motor driver
 The system controls two BO motors with gradual speed variation and bidirectional rotation.
 
 🎥 Project Demonstration Videos (Step-by-Step Series)
+
 1️⃣ Firmware Logic Explanation 👉 https://youtu.be/LVh8_5QmBsc
 
 2️⃣ STM32CubeMX Configuration  👉 https://youtu.be/6h8yBiUqF0A
@@ -54,6 +55,7 @@ HAL Drivers
 ST-Link Debugger
 
 🧠 Technical Implementation
+
 🔹 Timer Configuration
 
 TIM2 used in PWM Generation Mode
@@ -135,9 +137,13 @@ Hardware + Firmware integration
 💼 Why This Project is Relevant for Embedded Firmware Roles
 
 ✔ Real hardware validation
+
 ✔ Timer-based control (not software delay PWM)
+
 ✔ Debug-level verification
+
 ✔ Clean HAL-based firmware architecture
+
 ✔ Practical H-Bridge motor control implementation
 
 👨‍💻 Author

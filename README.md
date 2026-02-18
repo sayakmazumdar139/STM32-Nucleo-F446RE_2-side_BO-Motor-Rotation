@@ -19,15 +19,15 @@ Practical hardware validation using L298N motor driver
 The system controls two BO motors with gradual speed variation and bidirectional rotation.
 
 🎥 Project Demonstration Videos (Step-by-Step Series)
-1️⃣ Firmware Logic Explanation
+1️⃣ Firmware Logic Explanation 👉 https://youtu.be/LVh8_5QmBsc
 
-2️⃣ STM32CubeMX Configuration
+2️⃣ STM32CubeMX Configuration  👉 https://youtu.be/6h8yBiUqF0A
 
-3️⃣ Code Implementation & PWM Control
+3️⃣ Code Implementation & PWM Control  👉 https://youtu.be/YfglkUXTCYQ
 
-4️⃣ Build & Debug Process (Live)
+4️⃣ Build & Debug Process (Live)  👉  https://youtu.be/i27bujc_mCc
 
-5️⃣ Hardware Testing with L298N Driver
+5️⃣ Hardware Testing with L298N Driver  👉 https://youtu.be/c-xIM9MoEZ0
 
 Each video explains configuration, firmware logic, debugging, and real hardware validation.
 
@@ -71,7 +71,9 @@ PWM Frequency ≈ 500 Hz
 Motor speed is varied using:
 
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1000);
+
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1500);
+
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 2000);
 
 
@@ -82,6 +84,7 @@ Duty cycle variation controls motor speed smoothly.
 GPIO pins control direction:
 
 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
+
 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 
 

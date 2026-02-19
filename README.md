@@ -12,7 +12,7 @@ Focus Areas:
 - Embedded C firmware structuring
 
 
-## 📌 Project Overview:
+## 📌 Project Overview
 
 This project demonstrates PWM-based DC motor speed and direction control using the STM32 Nucleo-F446RE development board.
 
@@ -31,7 +31,7 @@ The firmware is developed using HAL drivers and focuses on:
 The system controls two DC BO motors with smooth speed variation and bidirectional rotation using hardware-timer based PWM.
 
 
-## 🚀 Key Features:
+## 🚀 Key Features
 
 - Dual DC motor control using hardware PWM
 - 
@@ -44,14 +44,14 @@ The system controls two DC BO motors with smooth speed variation and bidirection
 - Register-level verification (TIM2 → CNT, ARR, CCR)
 
 
-## 🧩 System Architecture:
+## 🧩 System Architecture
 
 STM32 (TIM2 PWM) → L298N Driver → DC Motors
                 ↑
              GPIO (Direction)
 
 
-## 🎥 Project Demonstration Videos (Step-by-Step Series):
+## 🎥 Project Demonstration Videos (Step-by-Step Series)
 
 ### 1️⃣ Live Demo Working 
 👉[![Live Demo Working](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
@@ -70,20 +70,20 @@ STM32 (TIM2 PWM) → L298N Driver → DC Motors
 
 Each video explains configuration, firmware logic, debugging, and real hardware validation.
 
-## 🛠 Hardware Used:
+## 🛠 Hardware Used
 
 STM32 Nucleo-F446RE
 
 L298N H-Bridge Motor Driver
 
-2x BO DC Motors
+2x BO DC Motors 
 
 12V Li-ion Battery
 
 USB ST-Link Debug Interface
 
 
-## 🔌 Pin Configuration:
+## 🔌 Pin Configuration
 
 | Function | STM32 Pin | Description |
 |----------|-----------|-------------|
@@ -95,7 +95,7 @@ USB ST-Link Debug Interface
 | GPIO     | PB0       | Motor 2 Direction Control |
 
 
-## ⚙️ Software & Tools:
+## ⚙️ Software & Tools
 
 STM32CubeIDE
 
@@ -106,7 +106,7 @@ HAL Drivers
 ST-Link Debugger
 
 
-## 🧠 Technical Implementation:
+## 🧠 Technical Implementation
 
 🔹 Timer Configuration
 
@@ -227,7 +227,7 @@ Hardware + Firmware integration
 ✔ Practical H-Bridge motor control implementation
 
 
-## 👨‍💻 Author:
+## 👨‍💻 Author
 
 Sayak Mazumdar
 

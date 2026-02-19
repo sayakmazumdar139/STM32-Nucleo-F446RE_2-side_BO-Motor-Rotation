@@ -26,11 +26,14 @@ The system controls two BO motors with gradual speed variation and bidirectional
 ### 2️⃣ Project Context + STM32CubeMX Configuration  
 👉[![Project Context + STM32CubeMX Configuration](https://img.youtube.com/vi/6h8yBiUqF0A/0.jpg)](https://youtu.be/6h8yBiUqF0A)
 
-3️⃣ Code Implementation & PWM Control  👉 https://youtu.be/YfglkUXTCYQ
+### 3️⃣ Code Implementation & PWM Control
+👉 [![Code Implementation & PWM Control](https://img.youtube.com/vi/YfglkUXTCYQ/0.jpg)](https://youtu.be/YfglkUXTCYQ)
 
-4️⃣ Build & Debug Process (Live)  👉  https://youtu.be/i27bujc_mCc
+### 4️⃣ Build & Debug Process (Live)
+👉  [![Build & Debug Process (Live)](https://img.youtube.com/vi/i27bujc_mCc/0.jpg)](https://youtu.be/i27bujc_mCc)
 
-5️⃣ Hardware Testing with L298N Driver  👉 https://youtu.be/c-xIM9MoEZ0
+### 5️⃣ Hardware Testing with L298N Driver
+👉 [![Hardware Testing with L298N Driver](https://img.youtube.com/vi/c-xIM9MoEZ0/0.jpg)](https://youtu.be/c-xIM9MoEZ0)
 
 Each video explains configuration, firmware logic, debugging, and real hardware validation.
 

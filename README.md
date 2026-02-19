@@ -1,7 +1,18 @@
 # STM32 Dual DC BO Motor Control Using PWM, GPIO & UART (Nucleo-F446RE)
 
+## 🔎 Executive Summary
 
-📌 Project Overview:
+A dual DC motor control system implemented on STM32 Nucleo-F446RE using hardware timer-based PWM.  
+Demonstrates bidirectional motor control, smooth duty-cycle variation, register-level debugging, and real hardware validation using L298N driver.
+
+Focus Areas:
+- Hardware Timer (TIM2) PWM generation
+- GPIO-based H-Bridge control
+- Debug verification via SFR inspection
+- Embedded C firmware structuring
+
+
+## 📌 Project Overview:
 
 This project demonstrates PWM-based DC motor speed and direction control using the STM32 Nucleo-F446RE development board.
 
@@ -20,7 +31,7 @@ The firmware is developed using HAL drivers and focuses on:
 The system controls two DC BO motors with smooth speed variation and bidirectional rotation using hardware-timer based PWM.
 
 
-🚀 Key Features:
+## 🚀 Key Features:
 
 - Dual DC motor control using hardware PWM
 - 
@@ -33,7 +44,14 @@ The system controls two DC BO motors with smooth speed variation and bidirection
 - Register-level verification (TIM2 → CNT, ARR, CCR)
 
 
-🎥 Project Demonstration Videos (Step-by-Step Series):
+## 🧩 System Architecture:
+
+STM32 (TIM2 PWM) → L298N Driver → DC Motors
+                ↑
+             GPIO (Direction)
+
+
+## 🎥 Project Demonstration Videos (Step-by-Step Series):
 
 ### 1️⃣ Live Demo Working 
 👉[![Live Demo Working](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
@@ -52,7 +70,7 @@ The system controls two DC BO motors with smooth speed variation and bidirection
 
 Each video explains configuration, firmware logic, debugging, and real hardware validation.
 
-🛠 Hardware Used:
+## 🛠 Hardware Used:
 
 STM32 Nucleo-F446RE
 
@@ -64,7 +82,20 @@ L298N H-Bridge Motor Driver
 
 USB ST-Link Debug Interface
 
-⚙️ Software & Tools:
+
+## 🔌 Pin Configuration:
+
+| Function | STM32 Pin | Description |
+|----------|-----------|-------------|
+| PWM CH2  | PA1       | Motor 2 Speed |
+| PWM CH3  | PB10      | Motor 1 Speed |
+| GPIO     | PB4       | Motor 1 Direction Control |
+| GPIO     | PB5       | Motor 1 Direction Control |
+| GPIO     | PA4       | Motor 2 Direction Control |
+| GPIO     | PB0       | Motor 2 Direction Control |
+
+
+## ⚙️ Software & Tools:
 
 STM32CubeIDE
 
@@ -75,7 +106,7 @@ HAL Drivers
 ST-Link Debugger
 
 
-🧠 Technical Implementation:
+## 🧠 Technical Implementation:
 
 🔹 Timer Configuration
 
@@ -133,8 +164,23 @@ Observed ST-Link LED behavior
 
 Live debugging using breakpoints & step execution
 
+## 🧠 Design Decisions
 
-📊 Functional Flow
+- Used hardware timer PWM instead of software delay for stable frequency generation.
+- Selected 500 Hz PWM frequency for smooth motor operation.
+- Verified timer operation using CNT register observation.
+- Implemented incremental duty-cycle ramping for visible speed transition.
+
+
+## 📂 Project Structure
+
+/Core  
+/Drivers  
+/Src/main.c  
+/Inc  
+
+
+## 📊 Functional Flow
 
 Initialize GPIO, TIM2, UART
 
@@ -147,7 +193,7 @@ Change direction
 Repeat continuously (while loop)
 
 
-🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 
 Practical PWM generation using hardware timers
 
@@ -160,7 +206,15 @@ Embedded C firmware structuring
 Hardware + Firmware integration
 
 
-💼 Why This Project is Relevant for Embedded Firmware Roles
+## 🔮 Future Improvements
+
+- Implement PWM control using DMA
+- Add UART-based speed command interface
+- Integrate encoder feedback for closed-loop control
+- Port to FreeRTOS-based task scheduling
+
+
+## 💼 Why This Project is Relevant for Embedded Firmware Roles
 
 ✔ Real hardware validation
 
@@ -173,7 +227,7 @@ Hardware + Firmware integration
 ✔ Practical H-Bridge motor control implementation
 
 
-👨‍💻 Author
+## 👨‍💻 Author:
 
 Sayak Mazumdar
 

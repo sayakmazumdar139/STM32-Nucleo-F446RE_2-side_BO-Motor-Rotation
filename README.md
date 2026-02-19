@@ -20,7 +20,8 @@ The system controls two BO motors with gradual speed variation and bidirectional
 
 🎥 Project Demonstration Videos (Step-by-Step Series)
 
-1️⃣ Firmware Logic Explanation 👉 https://youtu.be/LVh8_5QmBsc
+### 1️⃣ Firmware Logic Explanation
+[![Firmware Logic](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
 
 2️⃣ STM32CubeMX Configuration  👉 https://youtu.be/6h8yBiUqF0A
 

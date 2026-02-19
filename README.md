@@ -34,18 +34,17 @@ The system controls two DC BO motors with smooth speed variation and bidirection
 ## 🚀 Key Features
 
 - Dual DC motor control using hardware PWM
-- 
+  
 - Bidirectional rotation via H-Bridge logic
-- 
+ 
 - Gradual duty-cycle based speed variation
-- 
+  
 - Real-time debugging using ST-Link
-- 
+  
 - Register-level verification (TIM2 → CNT, ARR, CCR)
 
 
 ## 🧩 System Architecture
-
 
 STM32 (TIM2 PWM) → L298N Driver → DC Motors
 
@@ -74,15 +73,19 @@ Each video explains configuration, firmware logic, debugging, and real hardware 
 
 ## 🛠 Hardware Used
 
-STM32 Nucleo-F446RE
+✔️STM32 Nucleo-F446RE Dev. Board
 
-L298N H-Bridge Motor Driver
+✔️L298N H-Bridge Motor Driver
 
-2x BO DC Motors 
+✔️2x BO DC Motors with wheels
 
-12V Li-ion Battery
+✔️12V Li-ion Battery with ON-OFF Switch
 
-USB ST-Link Debug Interface
+✔️Jumper Wires
+
+✔️USB ST-Link Debug Interface(Probe)
+
+✔️PC/Laptop
 
 
 ## 🔌 Pin Configuration
@@ -99,53 +102,55 @@ USB ST-Link Debug Interface
 
 ## ⚙️ Software & Tools
 
-STM32CubeIDE
+☑️STM32CubeMX
 
-STM32CubeMX
+☑️STM32CubeIDE
 
-HAL Drivers
+☑️STM32CubeProgrammer
 
-ST-Link Debugger
+☑️HAL Drivers
+
+☑️ST-Link Debugger
 
 
 ## 🧠 Technical Implementation
 
 🔹 Timer Configuration
 
-TIM2 used in PWM Generation Mode
+◻️ TIM2 used in PWM Generation Mode
 
-APB1 Timer Clock: 90 MHz
+◻️ APB1 Timer Clock: 90 MHz
 
-Prescaler = 89
+◻️ Prescaler = 89
 
-Auto-Reload (ARR) = 1999
+◻️ Auto-Reload (ARR) = 1999
 
-PWM Frequency ≈ 500 Hz
+◻️ PWM Frequency ≈ 500 Hz
 
 
 🔹 PWM Speed Control
 
-Motor speed is varied using:
+◻️ Motor_1 speed is varied using:
 
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1000);
 
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1500);
-
+ 
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 2000);
 
-Duty cycle variation controls motor speed smoothly.
+◻️ Duty cycle variation controls motor speed smoothly.
 
 
 🔹 Direction Control (H-Bridge Logic)
 
-GPIO pins control direction:
+▶️  GPIO pins control direction:
 
 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
 
 HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 
 
-Logic combinations:
+✅ Logic combinations:
 
 (0,1) → Backward
 
@@ -156,21 +161,24 @@ Logic combinations:
 
 🔹 Debug Validation
 
-SFR register inspection (TIM2 → CNT, ARR, CCRx)
+🔸 SFR register inspection (TIM2 → CNT, ARR, CCRx)
+ 
+🔸 Verified counter increment
 
-Verified counter increment
+🔸 Confirmed CCR value change
 
-Confirmed CCR value change
+🔸 Observed ST-Link LED behavior
 
-Observed ST-Link LED behavior
-
-Live debugging using breakpoints & step execution
+🔸 Live debugging using breakpoints & step execution
 
 ## 🧠 Design Decisions
 
 - Used hardware timer PWM instead of software delay for stable frequency generation.
+  
 - Selected 500 Hz PWM frequency for smooth motor operation.
+  
 - Verified timer operation using CNT register observation.
+  
 - Implemented incremental duty-cycle ramping for visible speed transition.
 
 
@@ -184,35 +192,38 @@ Live debugging using breakpoints & step execution
 
 ## 📊 Functional Flow
 
-Initialize GPIO, TIM2, UART
+✅ Initialize GPIO, TIM2, UART
 
-Start PWM on CH2 & CH3
+✅ Start PWM on CH2 & CH3
 
-Gradually increase duty cycle
+✅ Gradually increase duty cycle
 
-Change direction
+✅ Change direction
 
-Repeat continuously (while loop)
+✅ Repeat continuously (while loop)
 
 
 ## 🎯 Learning Outcomes
 
-Practical PWM generation using hardware timers
+♦️ Practical PWM generation using hardware timers
 
-Register-level debugging
+♦️ Register-level debugging
 
-Understanding APB clock & prescaler calculation
+♦️ Understanding APB clock & prescaler calculation
 
-Embedded C firmware structuring
+♦️ Embedded C firmware structuring
 
-Hardware + Firmware integration
+♦️ Hardware + Firmware integration
 
 
 ## 🔮 Future Improvements
 
 - Implement PWM control using DMA
+  
 - Add UART-based speed command interface
+  
 - Integrate encoder feedback for closed-loop control
+  
 - Port to FreeRTOS-based task scheduling
 
 
@@ -231,6 +242,6 @@ Hardware + Firmware integration
 
 ## 👨‍💻 Author
 
-Sayak Mazumdar
+Sayak Mazumdar 
 
 Embedded Firmware Developer Aspirant

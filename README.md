@@ -21,9 +21,10 @@ The system controls two BO motors with gradual speed variation and bidirectional
 🎥 Project Demonstration Videos (Step-by-Step Series)
 
 ### 1️⃣ Live Demo Working 
-[![Live Demo Working](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
+👉[![Live Demo Working](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
 
-2️⃣ Project Context + STM32CubeMX Configuration  👉 https://youtu.be/6h8yBiUqF0A
+### 2️⃣ Project Context + STM32CubeMX Configuration  
+👉[![Project Context + STM32CubeMX Configuration](https://img.youtube.com/vi/6h8yBiUqF0A/0.jpg)](https://youtu.be/6h8yBiUqF0A)
 
 3️⃣ Code Implementation & PWM Control  👉 https://youtu.be/YfglkUXTCYQ
 
@@ -93,9 +94,9 @@ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 
 Logic combinations:
 
-(0,1) → Forward
+(0,1) → Backward
 
-(1,0) → Backward
+(1,0) → Forward
 
 (0,0) → Stop
 
@@ -150,4 +151,5 @@ Hardware + Firmware integration
 👨‍💻 Author
 
 Sayak Mazumdar
+
 Embedded Firmware Developer Aspirant

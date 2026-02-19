@@ -47,6 +47,7 @@ The system controls two DC BO motors with smooth speed variation and bidirection
 ## 🧩 System Architecture
 
 STM32 (TIM2 PWM) → L298N Driver → DC Motors
+
                 ↑
              GPIO (Direction)
 

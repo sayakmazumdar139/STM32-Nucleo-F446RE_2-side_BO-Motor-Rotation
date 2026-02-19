@@ -1,24 +1,39 @@
 # STM32 Dual DC BO Motor Control Using PWM, GPIO & UART (Nucleo-F446RE)
 
-📌 Project Overview
+
+📌 Project Overview:
 
 This project demonstrates PWM-based DC motor speed and direction control using the STM32 Nucleo-F446RE development board.
 
 The firmware is developed using HAL drivers and focuses on:
 
-Hardware Timer (TIM2) PWM generation
+♦️Hardware Timer (TIM2) PWM generation
 
-GPIO-based motor direction control (H-Bridge logic)
+♦️GPIO-based motor direction control (H-Bridge logic)
 
-Real-time debugging using ST-Link
+♦️Real-time debugging using ST-Link
 
-Register verification via SFR view
+♦️Register verification via SFR view
 
-Practical hardware validation using L298N motor driver
+♦️Practical hardware validation using L298N motor driver
 
-The system controls two BO motors with gradual speed variation and bidirectional rotation.
+The system controls two DC BO motors with smooth speed variation and bidirectional rotation using hardware-timer based PWM.
 
-🎥 Project Demonstration Videos (Step-by-Step Series)
+
+🚀 Key Features:
+
+- Dual DC motor control using hardware PWM
+- 
+- Bidirectional rotation via H-Bridge logic
+- 
+- Gradual duty-cycle based speed variation
+- 
+- Real-time debugging using ST-Link
+- 
+- Register-level verification (TIM2 → CNT, ARR, CCR)
+
+
+🎥 Project Demonstration Videos (Step-by-Step Series):
 
 ### 1️⃣ Live Demo Working 
 👉[![Live Demo Working](https://img.youtube.com/vi/LVh8_5QmBsc/0.jpg)](https://youtu.be/LVh8_5QmBsc)
@@ -37,7 +52,7 @@ The system controls two BO motors with gradual speed variation and bidirectional
 
 Each video explains configuration, firmware logic, debugging, and real hardware validation.
 
-🛠 Hardware Used
+🛠 Hardware Used:
 
 STM32 Nucleo-F446RE
 
@@ -49,7 +64,7 @@ L298N H-Bridge Motor Driver
 
 USB ST-Link Debug Interface
 
-⚙️ Software & Tools
+⚙️ Software & Tools:
 
 STM32CubeIDE
 
@@ -59,7 +74,8 @@ HAL Drivers
 
 ST-Link Debugger
 
-🧠 Technical Implementation
+
+🧠 Technical Implementation:
 
 🔹 Timer Configuration
 
@@ -73,6 +89,7 @@ Auto-Reload (ARR) = 1999
 
 PWM Frequency ≈ 500 Hz
 
+
 🔹 PWM Speed Control
 
 Motor speed is varied using:
@@ -83,8 +100,8 @@ __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1500);
 
 __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 2000);
 
-
 Duty cycle variation controls motor speed smoothly.
+
 
 🔹 Direction Control (H-Bridge Logic)
 
@@ -103,6 +120,7 @@ Logic combinations:
 
 (0,0) → Stop
 
+
 🔹 Debug Validation
 
 SFR register inspection (TIM2 → CNT, ARR, CCRx)
@@ -114,6 +132,7 @@ Confirmed CCR value change
 Observed ST-Link LED behavior
 
 Live debugging using breakpoints & step execution
+
 
 📊 Functional Flow
 
@@ -127,6 +146,7 @@ Change direction
 
 Repeat continuously (while loop)
 
+
 🎯 Learning Outcomes
 
 Practical PWM generation using hardware timers
@@ -139,6 +159,7 @@ Embedded C firmware structuring
 
 Hardware + Firmware integration
 
+
 💼 Why This Project is Relevant for Embedded Firmware Roles
 
 ✔ Real hardware validation
@@ -150,6 +171,7 @@ Hardware + Firmware integration
 ✔ Clean HAL-based firmware architecture
 
 ✔ Practical H-Bridge motor control implementation
+
 
 👨‍💻 Author
 

@@ -193,11 +193,11 @@ HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 
 The main firmware logic resides in `main.c`, which includes:
 
-- Peripheral initialization (GPIO, TIM2, UART)
-- PWM start configuration using HAL_TIM_PWM_Start()
-- Direction control using HAL_GPIO_WritePin()
-- Duty cycle adjustment via __HAL_TIM_SET_COMPARE()
-- Infinite loop control logic (while(1))
+- Peripheral initialization 👉 (GPIO, TIM2, UART)
+- PWM start configuration using 👉 HAL_TIM_PWM_Start()
+- Direction control using 👉 HAL_GPIO_WritePin()
+- Duty cycle adjustment via 👉 __HAL_TIM_SET_COMPARE()
+- Infinite loop control logic 👉 (while(1))
 
 
 ## 📊 Functional Flow

@@ -90,8 +90,8 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); //PB10 TIM2 CH3
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2); //PA1 TIM2 CH2
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); //PB10 TIM2 CH3 Motor 1
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2); //PA1 TIM2 CH2 Motor 2
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -99,68 +99,68 @@ int main(void)
   while (1)
   {
 
-	  // Set the rotation direction backward
+	  // Set the rotation direction backward Motor 1
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
-	      // Set the speed slow
+	      // Set the speed slow Motor 1
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 1000);
 	      HAL_Delay(2000);
-	      // Set the speed medium
+	      // Set the speed medium Motor 1
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 1500);
 	      HAL_Delay(2000);
-	      // Set the speed high
+	      // Set the speed high Motor 1
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 2000);
 	      HAL_Delay(2000);
-	      // Stop the motor
+	      // Stop the motor 1
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
 	      HAL_Delay(2000);
-	      // Set the rotation direction forward
+	      // Set the rotation direction forward Motor 1
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 1);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
-	      // Set the speed slow
+	      // Set the speed slow Motor 1 
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 1000);
 	      HAL_Delay(2000);
-	      // Set the speed medium
+	      // Set the speed medium Motor 1
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 1500);
 	      HAL_Delay(2000);
-	      // Set the speed high
+	      // Set the speed high Motor 1
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_3, 2000);
 	      HAL_Delay(2000);
-	      // Stop the motor
+	      // Stop the motor 1
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
 	      HAL_Delay(2000);
 
-	      // Set the rotation direction backward
+	      // Set the rotation direction backward Motor 2
 	      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 1);
-	      // Set the speed slow
+	      // Set the speed slow Motor 2
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 1000);
 	      HAL_Delay(2000);
-	      // Set the speed medium
+	      // Set the speed medium Motor 2 
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 1500);
 	      HAL_Delay(2000);
-	      // Set the speed high
+	      // Set the speed high Motor 2
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 2000);
 	      HAL_Delay(2000);
-	      // Stop the motor
+	      // Stop the motor 2
 	      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
 	      HAL_Delay(2000);
-	      // Set the rotation direction forward
+	      // Set the rotation direction forward Motor 2
 	      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 1);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
-	      // Set the speed slow
+	      // Set the speed slow Motor 2
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 1000);
 	      HAL_Delay(2000);
-	      // Set the speed medium
+	      // Set the speed medium Motor 2
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 1500);
 	      HAL_Delay(2000);
-	      // Set the speed high
+	      // Set the speed high Motor 2
 	      __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2, 2000);
 	      HAL_Delay(2000);
-	      // Stop the motor
+	      // Stop the motor 2
 	      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
 	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
 	      HAL_Delay(2000);
@@ -262,3 +262,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
